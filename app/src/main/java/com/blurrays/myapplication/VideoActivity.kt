@@ -13,12 +13,14 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.media.MediaPlayer
 import android.webkit.WebView
 
 
 class VideoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        var mediaPlayer = MediaPlayer.create(this,R.raw.sample);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video)
 
@@ -26,9 +28,9 @@ class VideoActivity : AppCompatActivity() {
         GoBackBtn.setOnClickListener(){
             val intent = Intent(this, MainActivity::class.java);
             startActivity(intent);
+            mediaPlayer.start();
         }
         val webView = findViewById<WebView>(R.id.MemeView);
         webView.loadUrl("https://www.youtube.com/watch?v=havhaDYh0Sc&t=1s");
-
     }
 }

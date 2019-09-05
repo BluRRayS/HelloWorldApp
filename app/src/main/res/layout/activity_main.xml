@@ -83,4 +83,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/upgradddd" />
 
+    <ToggleButton
+            android:id="@+id/onOffFlashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Turn On/Off Camera LED/ Flashlight Android"
+            android:textOff="Turn On"
+            android:textOn="Turn Off"
+            app:layout_constraintBottom_toTopOf="@+id/UpgradeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
