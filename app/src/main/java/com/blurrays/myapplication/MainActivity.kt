@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         var mediaPlayer = MediaPlayer.create(this,R.raw.sample)
-        val vibrator = getSystemService(VIBRATOR_SERVICE);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         println("Hello World!")
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             mediaPlayer.start()
             val rnd = Random.nextInt(0,200)
             findViewById<TextView>(R.id.textView).text = "This:"+rnd+" is a random number!"
-            vibrate();
+            vibrate()
         }
 
         val inputButton = findViewById<Button>(R.id.InputButton)
@@ -64,9 +63,6 @@ class MainActivity : AppCompatActivity() {
                         VibrationEffect.DEFAULT_AMPLITUDE
                     )
                 )
-            }else{
-                // This method was deprecated in API level 26
-                vibrator.vibrate(milliseconds)
             }
         }
     }
