@@ -11,7 +11,6 @@ import android.webkit.WebView
 class VideoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var mediaPlayer = MediaPlayer.create(this,R.raw.sample)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video)
 
@@ -19,7 +18,6 @@ class VideoActivity : AppCompatActivity() {
         goBackBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            mediaPlayer.start()
         }
         val webView = findViewById<WebView>(R.id.MemeView)
         webView.loadUrl("https://i.pinimg.com/originals/70/c6/56/70c6564ccd4fa0d3d57d27dba0729284.jpg")
