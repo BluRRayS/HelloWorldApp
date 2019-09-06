@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,13 +31,24 @@ class LoginActivity : AppCompatActivity() {
 
             if (checkCredentials(inputEmail, inputPassword)) {
 
-                Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+                Snackbar.make(
+                    findViewById<View>(R.id.btnLogin),
+                    "Login successful!",
+                    Snackbar.LENGTH_LONG
+                )
+                    .setAction("Action", null).show()
+
                 //Todo: Generate key and move to new activity.
-                val intent = Intent(this, MainActivity::class.java);
-                startActivity(intent);
+                val intent = Intent(this, HomeActivity::class.java);
+
             } else {
-                //Todo: toast notification.
-                Toast.makeText(this, "Wrong Credentials!", Toast.LENGTH_LONG).show()
+
+                Snackbar.make(
+                    findViewById<View>(R.id.btnLogin),
+                    "Wrong Credentials!",
+                    Snackbar.LENGTH_LONG
+                )
+                    .setAction("Action", null).show()
             }
 
         }
