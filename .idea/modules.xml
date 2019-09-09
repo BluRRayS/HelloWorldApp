@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MyApplication.iml" filepath="$PROJECT_DIR$/.idea/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppData/MyJobAppData.iml" filepath="$PROJECT_DIR$/MyJobAppData/MyJobAppData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppInterfaces/MyJobAppInterfaces.iml" filepath="$PROJECT_DIR$/MyJobAppInterfaces/MyJobAppInterfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppLogic/MyJobAppLogic.iml" filepath="$PROJECT_DIR$/MyJobAppLogic/MyJobAppLogic.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -13,6 +13,8 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.widget.TextView
+import kotlinx.android.synthetic.main.nav_header_home.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -42,6 +44,15 @@ class HomeActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+        //TODO: TextView doesn't exist in current context find way to fix.
+        // val emailTextView = findViewById<TextView>(R.id.MailTextView)
+        // emailTextView.text = intent.getStringExtra("Email")
+
+        val headerView = navView.getHeaderView(0)
+        val emailTextView = headerView.findViewById<TextView>(R.id.MailTextView)
+        emailTextView.text = intent.getStringExtra("Email")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

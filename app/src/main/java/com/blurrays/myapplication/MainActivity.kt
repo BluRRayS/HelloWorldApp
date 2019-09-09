@@ -23,25 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun vibrate(milliseconds: Long = 500) {
-        val vibrator = this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        // Check whether device/hardware has a vibrator
-        val canVibrate: Boolean = vibrator.hasVibrator()
-
-        if (canVibrate) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                // void vibrate (VibrationEffect vibe)
-                vibrator.vibrate(
-                    VibrationEffect.createOneShot(
-                        milliseconds,
-                        // The default vibration strength of the device.
-                        VibrationEffect.DEFAULT_AMPLITUDE
-                    )
-                )
-            }
-        }
-    }
 }
 
 
