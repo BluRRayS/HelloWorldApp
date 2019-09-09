@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MyApplication.iml" filepath="$PROJECT_DIR$/.idea/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobApp.iml" filepath="$PROJECT_DIR$/MyJobApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppData/MyJobApp-MyJobAppData.iml" filepath="$PROJECT_DIR$/MyJobAppData/MyJobApp-MyJobAppData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppInterfaces/MyJobApp-MyJobAppInterfaces.iml" filepath="$PROJECT_DIR$/MyJobAppInterfaces/MyJobApp-MyJobAppInterfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyJobAppLogic/MyJobApp-MyJobAppLogic.iml" filepath="$PROJECT_DIR$/MyJobAppLogic/MyJobApp-MyJobAppLogic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/MyJobApp-app.iml" filepath="$PROJECT_DIR$/app/MyJobApp-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyJobAppData/MyJobAppData.iml" filepath="$PROJECT_DIR$/MyJobAppData/MyJobAppData.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyJobAppInterfaces/MyJobAppInterfaces.iml" filepath="$PROJECT_DIR$/MyJobAppInterfaces/MyJobAppInterfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyJobAppLogic/MyJobAppLogic.iml" filepath="$PROJECT_DIR$/MyJobAppLogic/MyJobAppLogic.iml" />

@@ -5,6 +5,25 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public abstract class IUser {
+
+
+    public IUser(int id, String username, String email, String firstname, String lastname, String phone, List<IRole> roles, UserType type, String password, String salt, LocalDate dateOfBirth) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.phone = phone;
+        this.roles = roles;
+        this.type = type;
+        this.password = password;
+        this.salt = salt;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public IUser() {
+    }
+
     private int id;
     private String username;
     private String email;

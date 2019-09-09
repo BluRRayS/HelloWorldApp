@@ -35,6 +35,17 @@ class LoginActivity : AppCompatActivity() {
         inputPassword = findViewById<EditText>(R.id.textBoxPassword).text.toString()
         inputEmail = findViewById<EditText>(R.id.textBoxEmail).text.toString()
 
+        val registerTextView = findViewById<TextView>(R.id.RegisterTextView)
+        registerTextView.setOnClickListener {
+            Toast.makeText(
+                this@LoginActivity,
+                "You clicked on TextView 'Click Me'.",
+                Toast.LENGTH_SHORT
+            ).show()
+            val registerIntent = Intent(this, RegisterActivity::class.java)
+            startActivity(registerIntent)
+        }
+
         loginBtn.setOnClickListener {
 
             inputPassword = findViewById<EditText>(R.id.textBoxPassword).text.toString()
@@ -50,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
                 vibrate(100)
                 //Todo: Generate key and move to new activity.
                 val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("Email",inputEmail)
+                intent.putExtra("Email", inputEmail)
                 startActivity(intent)
 
             } else {
@@ -63,17 +74,13 @@ class LoginActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
             }
             vibrate()
-            val registerTextView = findViewById<TextView>(R.id.RegisterTextView)
-            registerTextView.setOnClickListener{
-                val registerIntent = Intent(this,RegisterActivity::class.java)
-                startActivity(registerIntent)
-            }
+
         }
     }
 
     private fun checkCredentials(email: String, password: String): Boolean {
         //Todo: Add logic
-        return isValidEmail(email) && password . isNotEmpty ()
+        return isValidEmail(email) && password.isNotEmpty()
 
     }
 
